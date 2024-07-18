@@ -1,9 +1,16 @@
-This directory contains files and scripts to update the fuzz-emoji lambda function.  
+# Overview 
 
-# The original lambda function
+This directory contains files and scripts to update the fuzz-emoji lambda function.
 
-The original lambda function was created using click-ops in the AWS console with 
-a Gateway API HTTP trigger.
+# Pre-requisites
+
+- An AWS account with a profile called `rivate`
+- aws CLI
+
+
+# The AWS lambda function
+
+The AWS lambda function was created using click-ops in the AWS console with a Gateway API HTTP trigger.
 
 # Create ECR repo
 
