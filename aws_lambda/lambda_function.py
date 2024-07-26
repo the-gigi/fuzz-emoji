@@ -10,11 +10,14 @@ def handler(event, context):
     try:
         logger.info("Received event: %s", event)
 
-        # Parse the JSON body of the event
-        body = json.loads(event.get("body", "{}"))
-        logger.info("Parsed body: %s", body)
+        # The descriptions may arrive as attribute of the event
+        descriptions = event.get("descriptions")
+        if descriptions is None:
+            # Parse the JSON body of the event
+            body = json.loads(event.get("body", "{}"))
+            logger.info("Parsed body: %s", body)
 
-        descriptions = body.get("descriptions", [])
+            descriptions = body.get("descriptions", [])
         logger.info("Descriptions: %s", descriptions)
 
         fuzz_emoji = FuzzEmoji()

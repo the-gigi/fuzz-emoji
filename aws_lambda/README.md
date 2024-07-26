@@ -1,4 +1,4 @@
-# Overview 
+# Overview
 
 This directory contains files and scripts to update the fuzz-emoji lambda function.
 
@@ -7,10 +7,10 @@ This directory contains files and scripts to update the fuzz-emoji lambda functi
 - An AWS account with a profile called `rivate`
 - aws CLI
 
-
 # The AWS lambda function
 
-The AWS lambda function was created using click-ops in the AWS console with a Gateway API HTTP trigger.
+The AWS lambda function was created using click-ops in the AWS console with a Gateway API HTTP
+trigger.
 
 # Create ECR repo
 
@@ -44,15 +44,31 @@ docker run --platform linux/arm64 -p 9000:8080 fuzz-emoji:latest lambda_function
 
 Then, using httpie and jq
 
-```
-http POST http://localhost:9000/2015-03-31/functions/function/invocations descriptions:='["flame", "Israel", confused"]' | jq -r '.body | fromjson'
-
+```shell
+http POST http://localhost:9000/2015-03-31/functions/function/invocations \
+    descriptions:='["flame", "Israel", "confused"]' | jq -r '.body | fromjson'
 {
-  "flame": "🔥",
-  "confused": "😕"
+  "flame": "('fire', '🔥')",
+  "Israel": "('israel', '🇮🇱')",
+  "confused": "('confused_face', '😕')"
 }
 ```
 
 # Testing the lambda function
 
+Your lambda function should like so in the AWS console:
 
+![](lambda_function.png)
+
+Now, you can test it using the API gateway endpoint via httpie and jq again:
+
+```shell
+http POST https://64856ijzmi.execute-api.us-west-2.amazonaws.com/default/fuzz-emoji \
+    descriptions:='["flame", "Israel", "confused"]' | jq -r
+
+{
+  "flame": "('fire', '🔥')",
+  "Israel": "('israel', '🇮🇱')",
+  "confused": "('confused_face', '😕')"
+}    
+```
