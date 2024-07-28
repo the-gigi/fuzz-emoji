@@ -1,7 +1,6 @@
 import unittest
 from parliament import Context
 
-
 func = __import__("func")
 
 
@@ -15,8 +14,8 @@ class DummyRequest:
 
 
 class TestFunc(unittest.TestCase):
+    # noinspection PyTypeChecker
     def test_func(self):
-
         result, code = func.main(Context(DummyRequest('flame,confused')))
         expected = """{"flame": "('fire', '🔥')", "confused": "('confused_face', '😕')"}"""
         self.assertEqual(expected, result)
