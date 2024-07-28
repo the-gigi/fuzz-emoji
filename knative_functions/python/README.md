@@ -22,3 +22,30 @@ drwxr-xr-x@  3 gigi  staff    96B Jul 21 15:56 .func
 -rw-r--r--@  1 gigi  staff    28B Jul 21 15:56 requirements.txt
 -rw-r--r--@  1 gigi  staff   258B Jul 21 15:56 test_func.py
 ```
+
+# Run the unit test
+
+Knative generates a unit test file. Unfortunately, it doesn't work out of the box.
+The function expects a parliament Context object that includes a Flask request.
+The original unit test simply passed an empty dict.
+
+I modified the unit test to conform to the correct signature and added a mock request.
+
+Now, you can run it with 
+
+
+```
+python test_func.py
+
+============================= test session starts ==============================
+collecting ... collected 1 item
+
+test_func.py::TestFunc::test_func 
+
+============================== 1 passed in 0.79s ===============================
+PASSED                                 [100%]
+Process finished with exit code 0
+```
+
+
+

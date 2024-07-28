@@ -49,7 +49,6 @@ http POST http://localhost:9000/2015-03-31/functions/function/invocations \
     descriptions:='["flame", "Israel", "confused"]' | jq -r '.body | fromjson'
 {
   "flame": "('fire', '🔥')",
-  "Israel": "('israel', '🇮🇱')",
   "confused": "('confused_face', '😕')"
 }
 ```
@@ -64,11 +63,10 @@ Now, you can test it using the API gateway endpoint via httpie and jq again:
 
 ```shell
 http POST https://64856ijzmi.execute-api.us-west-2.amazonaws.com/default/fuzz-emoji \
-    descriptions:='["flame", "Israel", "confused"]' | jq -r
+    descriptions:='["flame", "confused"]' | jq -r
 
 {
   "flame": "('fire', '🔥')",
-  "Israel": "('israel', '🇮🇱')",
   "confused": "('confused_face', '😕')"
 }    
 ```

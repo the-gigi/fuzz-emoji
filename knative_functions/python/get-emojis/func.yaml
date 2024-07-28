@@ -1,0 +1,11 @@
+specVersion: 0.36.0
+name: get-emojis
+runtime: python
+registry: docker.io/g1g1
+image: docker.io/g1g1/get-emojis:latest
+imageDigest: sha256:bccadca5c08ea7656b6cf5124e5b219e6d17cbc8e92f6faed5fd3dd6dba7d53d
+created: 2024-07-21T15:56:23.481513-07:00
+build:
+  builder: pack
+deploy:
+  namespace: default
