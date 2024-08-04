@@ -3,7 +3,7 @@ name: get-emojis
 runtime: python
 registry: docker.io/g1g1
 image: docker.io/g1g1/get-emojis:latest
-imageDigest: sha256:bccadca5c08ea7656b6cf5124e5b219e6d17cbc8e92f6faed5fd3dd6dba7d53d
+imageDigest: sha256:2a67e1ec133773233832362998e435fbd09fd1b44c83d58028663295f98924d7
 created: 2024-07-21T15:56:23.481513-07:00
 build:
   builder: pack

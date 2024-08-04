@@ -8,13 +8,13 @@ You can ask fuzz-emoji for `flame` and it will return the 🔥. How cool is that
 
 # The Matrix
 
-The project implements the same functionality in three different programming languages, and it deploys each implementation as a serverless function on one of the major cloud providers.
+The project implements the same functionality in three different programming languages, and it deploys each
+implementation as a serverless function on one of the major cloud providers.
 
-
-| Language | Deployment              |
-|:---------|:------------------------|
-| Python   | AWS Lambda              |
-| Golang   | Google Cloud Functions  |
-| Rust     | Azure Functions         |
+| Language | Deployment             |
+|:---------|:-----------------------|
+| Python   | AWS Lambda             |
+| Golang   | Google Cloud Functions |
+| Rust     | Azure Functions        |
 
 
