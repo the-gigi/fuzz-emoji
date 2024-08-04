@@ -1,0 +1,1 @@
+../../../golang/pkg/fuzz_emoji/fuzz_emoji.go

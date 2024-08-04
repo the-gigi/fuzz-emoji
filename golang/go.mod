@@ -1,4 +1,4 @@
-module fuzz-emoji
+module github.com/the-gigi/fuzz-emoji
 
 go 1.21.6
 
