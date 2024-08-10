@@ -1,0 +1,12 @@
+specVersion: 0.36.0
+name: get-emojis-go
+runtime: go
+registry: docker.io/g1g1
+image: g1g1/get-emojis-go:latest
+namespace: default
+created: 2024-08-03T19:22:29.162728-07:00
+build:
+  builder: pack
+deploy:
+  namespace: default
+  image: g1g1/get-emojis-go@sha256:eeb6d59abf107dfc348794fc2de7b8e764af88b3ee50dc30c66c3645a3c100d8
