@@ -7,5 +7,4 @@ fn main() {
     for (k, v) in result {
         println!("{}: {}", k, v);
     }
-    Ok(())
 }
