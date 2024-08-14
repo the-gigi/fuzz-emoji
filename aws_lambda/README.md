@@ -4,7 +4,7 @@ This directory contains files and scripts to update the fuzz-emoji lambda functi
 
 # Pre-requisites
 
-- An AWS account with a profile called `rivate`
+- An AWS account with a profile called `private`
 - aws CLI
 
 # The AWS lambda function
