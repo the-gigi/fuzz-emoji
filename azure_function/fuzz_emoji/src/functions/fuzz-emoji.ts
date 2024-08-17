@@ -1,0 +1,1 @@
+../../../../typescript/fuzz-emoji.ts

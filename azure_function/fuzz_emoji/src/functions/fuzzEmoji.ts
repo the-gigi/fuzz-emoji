@@ -1,5 +1,5 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-import { FuzzEmoji } from './FuzzEmojiClass';
+import { FuzzEmoji } from './fuzz-emoji';
 
 
 export async function fuzzEmoji(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {

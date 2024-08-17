@@ -45,7 +45,7 @@ The end result is:
 
 ## Symlink the FuzzEmoji class
 
-(cd src/functions &&  ln -s ../../../../typescript/FuzzEmoji.ts FuzzEmojiClass.ts)
+(cd src/functions &&  ln -s ../../../../typescript/fuzz-emoji.ts fuzz-emoji.ts)
 
 
 ## Create Azure function
