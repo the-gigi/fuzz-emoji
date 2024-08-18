@@ -60,24 +60,22 @@ npm run test
 
 Type this (the generated README.md, which says `npm run local`, which is wrong):
 
-```
+```shell
 func run start
 ```
 
+```
 ❯ http -b 'http://localhost:8080/?descriptions=flame,face'
 {
 "face": "('angry_face', '😠')",
 "flame": "('fire', '🔥')"
 }
-
 ```
-
 
 # Deploy the function to the cluster
 
-```
-
-❯ func deploy --registry docker.io/g1g1
+```shell
+func deploy --registry docker.io/g1g1
 
 Warning: namespace chosen is 'default', but currently active namespace is 'knative-serving'.
 Continuing with deployment to 'default'.
@@ -93,12 +91,10 @@ http://get-emojis.default.172.105.12.189.sslip.io
 # Invoke the deployed function
 
 ```
-
-http -b 'http://get-emojis.default.172.105.12.189.sslip.io?descriptions=flame,lea,long'
+❯ http -b 'http://get-emojis.default.172.105.12.189.sslip.io?descriptions=flame,lea,long'
 {
 "flame": "('fire', '🔥')",
 "lea": "('fallen_leaf', '🍂')",
 "long": "('long_drum', '🪘')"
 }
-
 ```

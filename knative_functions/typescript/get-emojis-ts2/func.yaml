@@ -1,8 +1,0 @@
-specVersion: 0.36.0
-name: get-emojis-ts2
-runtime: typescript
-created: 2024-08-17T18:23:38.947427-07:00
-build:
-  buildEnvs:
-  - name: BP_NODE_RUN_SCRIPTS
-    value: build
