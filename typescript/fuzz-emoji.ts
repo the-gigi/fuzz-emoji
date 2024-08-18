@@ -5,11 +5,6 @@ export class FuzzEmoji {
   private emojiDict: { [key: string]: string } = {};
 
   constructor() {
-    // Check if emojilib is undefined
-    if (!emojilib) {
-      throw new Error('emojilib is not defined or imported correctly');
-    }
-
     // Use emojilib to build the emoji dictionary
     for (const [emojiChar, keywords] of Object.entries(emojilib)) {
       if (keywords.length > 0) {
@@ -69,3 +64,6 @@ export class FuzzEmoji {
     return result;
   }
 }
+
+
+

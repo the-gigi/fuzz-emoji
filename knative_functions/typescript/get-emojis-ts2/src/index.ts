@@ -1,5 +1,4 @@
 import { Context, StructuredReturn } from 'faas-js-runtime';
-import { FuzzEmoji } from './fuzz-emoji';
 
 /**
  * Your HTTP handling function, invoked with each request. This is an example
@@ -20,14 +19,22 @@ import { FuzzEmoji } from './fuzz-emoji';
  * @param {string} context.httpVersion the HTTP protocol version
  * See: https://github.com/knative/func/blob/main/docs/guides/nodejs.md#the-context-object
  */
-const handle = async (context: Context, _: string): Promise<StructuredReturn> => {
-  _;
-  const descriptions = context.query?.['descriptions']?.split(',') || [];
-  const fuzzer = new FuzzEmoji();
-  const result = await fuzzer.getEmojis(descriptions);
+const handle = async (context: Context, body: string): Promise<StructuredReturn> => {
+  // YOUR CODE HERE
+  context.log.info(`
+-----------------------------------------------------------
+Headers:
+${JSON.stringify(context.headers)}
 
+Query:
+${JSON.stringify(context.query)}
+
+Body:
+${JSON.stringify(body)}
+-----------------------------------------------------------
+`);
   return {
-    body: JSON.stringify(result),
+    body: body,
     headers: {
       'content-type': 'application/json'
     }

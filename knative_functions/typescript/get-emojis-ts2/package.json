@@ -35,11 +35,6 @@
   },
   "dependencies": {
     "@types/node": "^20.14.9",
-    "axios": "^1.7.4",
-    "emojilib": "^3.0.12",
     "faas-js-runtime": "^2.4.0"
   }
 }
-
-
-
