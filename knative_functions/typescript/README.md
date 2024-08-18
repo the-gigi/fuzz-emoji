@@ -66,6 +66,7 @@ func run start
 
 ```
 ❯ http -b 'http://localhost:8080/?descriptions=flame,face'
+
 {
 "face": "('angry_face', '😠')",
 "flame": "('fire', '🔥')"
