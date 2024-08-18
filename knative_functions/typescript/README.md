@@ -92,6 +92,7 @@ http://get-emojis.default.172.105.12.189.sslip.io
 
 ```
 ❯ http -b 'http://get-emojis.default.172.105.12.189.sslip.io?descriptions=flame,lea,long'
+
 {
 "flame": "('fire', '🔥')",
 "lea": "('fallen_leaf', '🍂')",
