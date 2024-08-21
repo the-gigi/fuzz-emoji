@@ -12,4 +12,4 @@ build:
     value: build
 deploy:
   namespace: default
-  image: docker.io/g1g1/get-emojis-ts@sha256:19e56a3792cd076cf6ac70f8be526b275950c49e47bb0beb9a70639548a8ff78
+  image: docker.io/g1g1/get-emojis-ts:latest

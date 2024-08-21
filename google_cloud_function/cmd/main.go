@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/GoogleCloudPlatform/functions-framework-go/funcframework"
-	_ "github.com/the-gigi/get-emojis-goolge-cloud-function"
+	_ "github.com/the-gigi/get-emojis-google-cloud-function"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package google_cloud_function
 import (
 	"fmt"
 	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
-	"github.com/the-gigi/get-emojis-goolge-cloud-function/pkg/fuzz_emoji"
+	"github.com/the-gigi/get-emojis-google-cloud-function/pkg/fuzz_emoji"
 	"net/http"
 	"strings"
 )

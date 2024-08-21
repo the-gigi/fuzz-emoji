@@ -1,4 +1,4 @@
-module github.com/the-gigi/get-emojis-goolge-cloud-function
+module github.com/the-gigi/get-emojis-google-cloud-function
 
 go 1.21.6
 
