@@ -1,4 +1,4 @@
-import { FuzzEmoji } from './fuzz-emoji.ts';
+import { FuzzEmoji } from './fuzz-emoji';
 
 async function main() {
   const descriptions = ['flame', 'confused', 'dog'];

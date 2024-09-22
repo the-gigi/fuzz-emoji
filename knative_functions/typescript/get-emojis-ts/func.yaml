@@ -2,14 +2,9 @@ specVersion: 0.36.0
 name: get-emojis-ts
 runtime: typescript
 registry: docker.io/g1g1
-image: docker.io/g1g1/get-emojis-ts:latest
-namespace: default
-created: 2024-08-17T13:00:48.612488-07:00
+created: 2024-08-21T11:51:53.027858-07:00
 build:
   builder: pack
   buildEnvs:
   - name: BP_NODE_RUN_SCRIPTS
     value: build
-deploy:
-  namespace: default
-  image: docker.io/g1g1/get-emojis-ts:latest
